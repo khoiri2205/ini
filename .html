@@ -1,29 +1,1032 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Galeri Rido</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal Informasi Kelas Teknologi Informasi - TI-3B 2024" />
+  <title>TI-3B | Portal Kelas Teknologi Informasi</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<h1>🎨 Galeri Keren</h1>
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div id="loading-screen">
+    <div class="loading-logo">TI-3B<span style="color:#fff;font-weight:300">PORTAL</span></div>
+    <div class="loading-bar-wrap">
+      <div class="loading-bar"></div>
+    </div>
+    <div class="loading-text">INITIALIZING SYSTEM...</div>
+  </div>
 
-<div class="filter">
-    <button onclick="filterGambar('all')">Semua</button>
-    <button onclick="filterGambar('alam')">Alam</button>
-    <button onclick="filterGambar('kota')">Kota</button>
-    <button onclick="filterGambar('tech')">Teknologi</button>
-</div>
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" data-goto="home">
+        <div class="nav-logo-icon">TI</div>
+        <span class="nav-logo-text">KELAS <span>3B</span></span>
+      </a>
 
-<div class="gallery">
-    <img src="https://picsum.photos/300?1" class="alam">
-    <img src="https://picsum.photos/300?2" class="kota">
-    <img src="https://picsum.photos/300?3" class="tech">
-    <img src="https://picsum.photos/300?4" class="alam">
-    <img src="https://picsum.photos/300?5" class="kota">
-</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-section="home" class="active"><i class="fas fa-house"></i> Home</a></li>
+        <li><a href="#" data-section="profil"><i class="fas fa-users"></i> Profil</a></li>
+        <li><a href="#" data-section="jadwal"><i class="fas fa-calendar"></i> Jadwal</a></li>
+        <li><a href="#" data-section="materi"><i class="fas fa-book-open"></i> Materi</a></li>
+        <li><a href="#" data-section="galeri"><i class="fas fa-images"></i> Galeri</a></li>
+        <li><a href="#" data-section="kontak"><i class="fas fa-envelope"></i> Kontak</a></li>
+      </ul>
 
-<script src="script.js"></script>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN
+  ============================================================ -->
+  <main>
+
+    <!-- ==========================================================
+         HOME SECTION
+    ========================================================== -->
+    <section id="home" class="section">
+      <div id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles"></div>
+
+        <div class="hero-content">
+          <!-- Left -->
+          <div class="hero-left">
+            <div class="hero-badge">
+              <i class="fas fa-microchip"></i>
+              TEKNOLOGI INFORMASI &nbsp;·&nbsp; ANGKATAN 2022
+            </div>
+
+            <h1 class="hero-title">
+              <span class="line-1">SELAMAT DATANG DI</span>
+              <span class="line-2">KELAS TI-3B</span>
+              <span class="line-3">Generasi <span id="typewriter" style="color:var(--accent)">Inovatif</span></span>
+            </h1>
+
+            <p class="hero-desc">
+              Portal resmi Kelas TI-3B — tempat berbagi informasi, materi kuliah, jadwal, 
+              dan dokumentasi kegiatan mahasiswa Program Studi Teknologi Informasi.
+            </p>
+
+            <div class="hero-cta">
+              <button class="btn btn-primary" data-goto="profil">
+                <i class="fas fa-users"></i> Profil Kelas
+              </button>
+              <button class="btn btn-outline" data-goto="jadwal">
+                <i class="fas fa-calendar-alt"></i> Lihat Jadwal
+              </button>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="32" data-suffix="">32</span>
+                <span class="stat-label">Mahasiswa</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="8" data-suffix="">8</span>
+                <span class="stat-label">Mata Kuliah</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="3" data-suffix="rd">3rd</span>
+                <span class="stat-label">Semester</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="2024" data-suffix="">2024</span>
+                <span class="stat-label">Angkatan</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right (Visual Card) -->
+          <div class="hero-right">
+            <div class="hero-visual">
+              <div class="hero-card-main">
+                <div class="card-header-row">
+                  <div class="card-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="card-title-sm">CLASS_INFO.js</div>
+                </div>
+                <div class="code-block">
+                  <div><span class="keyword">const</span> <span class="variable">kelas</span> = {</div>
+                  <div>&nbsp;&nbsp;<span class="variable">nama</span>: <span class="string">"TI-3B"</span>,</div>
+                  <div>&nbsp;&nbsp;<span class="variable">prodi</span>: <span class="string">"Teknologi Informasi"</span>,</div>
+                  <div>&nbsp;&nbsp;<span class="variable">angkatan</span>: <span class="number">2022</span>,</div>
+                  <div>&nbsp;&nbsp;<span class="variable">semester</span>: <span class="number">5</span>,</div>
+                  <div>&nbsp;&nbsp;<span class="variable">mahasiswa</span>: <span class="number">32</span>,</div>
+                  <div>&nbsp;&nbsp;<span class="variable">status</span>: <span class="string">"AKTIF"</span>,</div>
+                  <div>&nbsp;&nbsp;<span class="comment">// Siap berinovasi!</span></div>
+                  <div>};</div>
+                  <br/>
+                  <div><span class="keyword">export default</span> <span class="variable">kelas</span>;</div>
+                </div>
+              </div>
+
+              <div class="hero-float-badge hero-float-1">
+                <i class="fas fa-circle" style="font-size:0.5rem"></i>
+                <span>ONLINE · 32 Members</span>
+              </div>
+              <div class="hero-float-badge hero-float-2">
+                <i class="fas fa-star" style="font-size:0.8rem"></i>
+                <span>Kelas Terbaik 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Info Strip -->
+      <div style="background:var(--dark-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;position:relative;z-index:1">
+        <div class="container">
+          <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;justify-content:center">
+            <div style="display:flex;align-items:center;gap:10px">
+              <i class="fas fa-university" style="color:var(--primary)"></i>
+              <span style="font-size:0.85rem;color:var(--text-muted)">Universitas Teknologi Nusantara</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <i class="fas fa-graduation-cap" style="color:var(--primary)"></i>
+              <span style="font-size:0.85rem;color:var(--text-muted)">Fakultas Ilmu Komputer</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <i class="fas fa-map-marker-alt" style="color:var(--primary)"></i>
+              <span style="font-size:0.85rem;color:var(--text-muted)">Gedung TI, Lantai 3</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <i class="fas fa-calendar-check" style="color:var(--accent)"></i>
+              <span style="font-size:0.85rem;color:var(--text-muted)">Semester Gasal 2024/2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="container section-padding">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-bolt"></i> FITUR UTAMA</div>
+          <h2 class="section-title">Semua yang Kamu Butuhkan <span>di Satu Tempat</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+          <div class="card fade-in-up stagger-1" style="cursor:pointer" data-goto="jadwal">
+            <div style="width:48px;height:48px;background:rgba(0,212,255,0.1);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--primary);margin-bottom:16px">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:0.95rem;color:var(--white);margin-bottom:8px;letter-spacing:1px">JADWAL KULIAH</h3>
+            <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Jadwal lengkap mata kuliah per hari, dosen pengampu, dan ruangan.</p>
+            <div style="margin-top:16px;font-size:0.78rem;color:var(--primary);display:flex;align-items:center;gap:6px">
+              Lihat Jadwal <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="card fade-in-up stagger-2" style="cursor:pointer" data-goto="materi">
+            <div style="width:48px;height:48px;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--accent);margin-bottom:16px">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:0.95rem;color:var(--white);margin-bottom:8px;letter-spacing:1px">MATERI & TUGAS</h3>
+            <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Akses materi kuliah, slide dosen, dan info tugas yang perlu diselesaikan.</p>
+            <div style="margin-top:16px;font-size:0.78rem;color:var(--accent);display:flex;align-items:center;gap:6px">
+              Akses Materi <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="card fade-in-up stagger-3" style="cursor:pointer" data-goto="galeri">
+            <div style="width:48px;height:48px;background:rgba(130,80,255,0.1);border:1px solid rgba(130,80,255,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#8250ff;margin-bottom:16px">
+              <i class="fas fa-images"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:0.95rem;color:var(--white);margin-bottom:8px;letter-spacing:1px">GALERI KELAS</h3>
+            <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Koleksi foto kegiatan dan momen berharga selama perkuliahan.</p>
+            <div style="margin-top:16px;font-size:0.78rem;color:#8250ff;display:flex;align-items:center;gap:6px">
+              Lihat Galeri <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="card fade-in-up stagger-4" style="cursor:pointer" data-goto="kontak">
+            <div style="width:48px;height:48px;background:rgba(255,164,56,0.1);border:1px solid rgba(255,164,56,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#ffa438;margin-bottom:16px">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:0.95rem;color:var(--white);margin-bottom:8px;letter-spacing:1px">KONTAK KELAS</h3>
+            <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Hubungi pengurus kelas atau sampaikan aspirasi dan saran kamu.</p>
+            <div style="margin-top:16px;font-size:0.78rem;color:#ffa438;display:flex;align-items:center;gap:6px">
+              Hubungi Kami <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         PROFIL SECTION
+    ========================================================== -->
+    <section id="profil" class="section">
+      <div class="container section-padding">
+        <div class="section-header fade-in-up">
+          <div class="section-tag"><i class="fas fa-id-card"></i> TENTANG KAMI</div>
+          <h2 class="section-title">Profil <span>Kelas TI-3B</span></h2>
+          <p class="section-subtitle">Mengenal lebih dekat mahasiswa dan struktur organisasi Kelas TI-3B Angkatan 2022.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Info Grid -->
+        <div class="info-grid fade-in-up">
+          <div class="card info-card">
+            <div class="info-icon"><i class="fas fa-university"></i></div>
+            <div>
+              <div class="info-label">Universitas</div>
+              <div class="info-value">Universitas Teknologi Nusantara</div>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-icon"><i class="fas fa-sitemap"></i></div>
+            <div>
+              <div class="info-label">Fakultas</div>
+              <div class="info-value">Ilmu Komputer</div>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-icon"><i class="fas fa-laptop-code"></i></div>
+            <div>
+              <div class="info-label">Program Studi</div>
+              <div class="info-value">Teknologi Informasi</div>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-icon"><i class="fas fa-users"></i></div>
+            <div>
+              <div class="info-label">Kelas</div>
+              <div class="info-value">TI-3B (32 Mahasiswa)</div>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-icon"><i class="fas fa-calendar"></i></div>
+            <div>
+              <div class="info-label">Angkatan / Semester</div>
+              <div class="info-value">2022 / Semester 5</div>
+            </div>
+          </div>
+          <div class="card info-card">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="info-label">Ruang Kelas</div>
+              <div class="info-value">Gedung TI, Ruang 302</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Struktur Organisasi -->
+        <div class="org-section fade-in-up">
+          <h3><i class="fas fa-sitemap"></i> Struktur Organisasi</h3>
+
+          <div class="org-chart">
+            <!-- Ketua -->
+            <div class="org-row">
+              <div class="org-node primary">
+                <div class="org-role">Ketua Kelas</div>
+                <div class="org-name">Rizki Ramadhan</div>
+              </div>
+            </div>
+
+            <div class="org-line"></div>
+
+            <!-- Sekretaris & Bendahara -->
+            <div style="position:relative;width:100%;display:flex;justify-content:center;gap:40px">
+              <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:220px;height:2px;background:rgba(0,212,255,0.2)"></div>
+              <div class="org-node">
+                <div class="org-role">Sekretaris</div>
+                <div class="org-name">Anisa Putri</div>
+              </div>
+              <div class="org-node">
+                <div class="org-role">Bendahara</div>
+                <div class="org-name">Budi Santoso</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:40px;justify-content:center">
+              <div class="org-line"></div>
+              <div class="org-line"></div>
+            </div>
+
+            <!-- Divisi -->
+            <div class="org-row" style="gap:16px;flex-wrap:wrap">
+              <div class="org-node">
+                <div class="org-role">Akademik</div>
+                <div class="org-name">Dian Rahayu</div>
+              </div>
+              <div class="org-node">
+                <div class="org-role">Humas</div>
+                <div class="org-name">Farhan Aditya</div>
+              </div>
+              <div class="org-node">
+                <div class="org-role">Kesenian</div>
+                <div class="org-name">Sari Melati</div>
+              </div>
+              <div class="org-node">
+                <div class="org-role">Olahraga</div>
+                <div class="org-name">Dedi Kusuma</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anggota Kelas -->
+        <div class="members-section fade-in-up">
+          <h3><i class="fas fa-users"></i> Daftar Anggota Kelas</h3>
+          <div class="members-grid" id="members-grid">
+            <!-- JS / Static Members -->
+            <div class="member-card">
+              <div class="member-avatar">RR</div>
+              <div class="member-name">Rizki Ramadhan</div>
+              <div class="member-nim">22TI001</div>
+              <div class="member-role"><span class="badge badge-primary"><i class="fas fa-crown" style="font-size:0.6rem"></i> Ketua</span></div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">AP</div>
+              <div class="member-name">Anisa Putri</div>
+              <div class="member-nim">22TI002</div>
+              <div class="member-role"><span class="badge badge-accent">Sekretaris</span></div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">BS</div>
+              <div class="member-name">Budi Santoso</div>
+              <div class="member-nim">22TI003</div>
+              <div class="member-role"><span class="badge badge-primary">Bendahara</span></div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">DR</div>
+              <div class="member-name">Dian Rahayu</div>
+              <div class="member-nim">22TI004</div>
+              <div class="member-role"><span class="badge badge-primary">Akademik</span></div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">FA</div>
+              <div class="member-name">Farhan Aditya</div>
+              <div class="member-nim">22TI005</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">SM</div>
+              <div class="member-name">Sari Melati</div>
+              <div class="member-nim">22TI006</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">DK</div>
+              <div class="member-name">Dedi Kusuma</div>
+              <div class="member-nim">22TI007</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">NA</div>
+              <div class="member-name">Nur Aini</div>
+              <div class="member-nim">22TI008</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">MW</div>
+              <div class="member-name">Muhammad Wahyu</div>
+              <div class="member-nim">22TI009</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">LP</div>
+              <div class="member-name">Linda Permata</div>
+              <div class="member-nim">22TI010</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">RP</div>
+              <div class="member-name">Raka Pratama</div>
+              <div class="member-nim">22TI011</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">YS</div>
+              <div class="member-name">Yuni Safitri</div>
+              <div class="member-nim">22TI012</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">HN</div>
+              <div class="member-name">Hendra Nugraha</div>
+              <div class="member-nim">22TI013</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">KA</div>
+              <div class="member-name">Kartika Anggraini</div>
+              <div class="member-nim">22TI014</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">IO</div>
+              <div class="member-name">Irfan Oktavian</div>
+              <div class="member-nim">22TI015</div>
+            </div>
+            <div class="member-card">
+              <div class="member-avatar">MF</div>
+              <div class="member-name">Maya Fitriani</div>
+              <div class="member-nim">22TI016</div>
+            </div>
+            <div class="member-card" style="opacity:0.7">
+              <div class="member-avatar" style="font-size:0.8rem;color:var(--text-muted)">+16</div>
+              <div class="member-name" style="color:var(--text-muted)">Anggota Lainnya</div>
+              <div class="member-nim">22TI017 – 032</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         JADWAL SECTION
+    ========================================================== -->
+    <section id="jadwal" class="section">
+      <div class="container section-padding">
+        <div class="section-header fade-in-up">
+          <div class="section-tag"><i class="fas fa-calendar-week"></i> PERKULIAHAN</div>
+          <h2 class="section-title">Jadwal <span>Kuliah</span></h2>
+          <p class="section-subtitle">Jadwal mata kuliah Semester 5 Kelas TI-3B Tahun Ajaran 2024/2025.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Semester Info -->
+        <div style="display:flex;gap:16px;margin-bottom:28px;flex-wrap:wrap">
+          <span class="badge badge-primary"><i class="fas fa-calendar"></i> Semester Gasal 2024/2025</span>
+          <span class="badge badge-accent"><i class="fas fa-clock"></i> Total: 20 SKS</span>
+          <span class="badge" style="background:rgba(255,164,56,0.1);color:#ffa438;border:1px solid rgba(255,164,56,0.3)">
+            <i class="fas fa-door-open"></i> Senin – Jumat
+          </span>
+        </div>
+
+        <!-- Day Tabs -->
+        <div class="schedule-tabs fade-in-up">
+          <button class="tab-btn" data-day="senin"><i class="fas fa-circle" style="font-size:0.5rem;color:var(--accent)"></i> Senin</button>
+          <button class="tab-btn" data-day="selasa">Selasa</button>
+          <button class="tab-btn" data-day="rabu">Rabu</button>
+          <button class="tab-btn" data-day="kamis">Kamis</button>
+          <button class="tab-btn" data-day="jumat">Jumat</button>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrap fade-in-up">
+          <table>
+            <thead>
+              <tr>
+                <th><i class="fas fa-clock" style="margin-right:6px"></i>Jam</th>
+                <th><i class="fas fa-book" style="margin-right:6px"></i>Mata Kuliah</th>
+                <th>SKS</th>
+                <th><i class="fas fa-chalkboard-teacher" style="margin-right:6px"></i>Dosen</th>
+                <th><i class="fas fa-map-pin" style="margin-right:6px"></i>Ruangan</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-body">
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Legend -->
+        <div class="schedule-legend fade-in-up">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:var(--primary)"></div>
+            <span>Teori</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#8250ff"></div>
+            <span>Praktikum</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:var(--accent)"></div>
+            <span>Lab Komputer</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#ffa438"></div>
+            <span>Umum</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         MATERI / TUGAS SECTION
+    ========================================================== -->
+    <section id="materi" class="section">
+      <div class="container section-padding">
+        <div class="section-header fade-in-up">
+          <div class="section-tag"><i class="fas fa-folder-open"></i> BELAJAR</div>
+          <h2 class="section-title">Materi & <span>Tugas</span></h2>
+          <p class="section-subtitle">Akses materi perkuliahan dan informasi tugas yang perlu diselesaikan.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="materi-tabs fade-in-up">
+          <button class="tab-btn" data-materi="materi"><i class="fas fa-file-alt"></i> Materi Kuliah</button>
+          <button class="tab-btn" data-materi="tugas"><i class="fas fa-tasks"></i> Tugas & Deadline</button>
+        </div>
+
+        <!-- Materi List -->
+        <div class="materi-list fade-in-up" data-list="materi" style="display:none">
+          <!-- Pemrograman Web -->
+          <div class="materi-item">
+            <div class="materi-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Pertemuan 1 – Pengenalan HTML5 & CSS3</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-calendar-alt"></i> 02 Sep 2024</span>
+                <span class="materi-size"><i class="fas fa-weight-hanging"></i> 4.2 MB</span>
+                <span class="badge badge-primary">Pemrograman Web</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon ppt"><i class="fas fa-file-powerpoint"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Pertemuan 2 – JavaScript Fundamentals</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-calendar-alt"></i> 09 Sep 2024</span>
+                <span class="materi-size"><i class="fas fa-weight-hanging"></i> 7.8 MB</span>
+                <span class="badge badge-primary">Pemrograman Web</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Pertemuan 3 – Entity Relationship Diagram (ERD)</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-calendar-alt"></i> 10 Sep 2024</span>
+                <span class="materi-size"><i class="fas fa-weight-hanging"></i> 3.1 MB</span>
+                <span class="badge badge-primary">Basis Data</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon zip"><i class="fas fa-file-archive"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Source Code – Latihan Algoritma Sorting</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-calendar-alt"></i> 12 Sep 2024</span>
+                <span class="materi-size"><i class="fas fa-weight-hanging"></i> 1.4 MB</span>
+                <span class="badge badge-primary">Algoritma</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon doc"><i class="fas fa-file-alt"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Modul Praktikum Jaringan – OSI Layer & TCP/IP</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-calendar-alt"></i> 17 Sep 2024</span>
+                <span class="materi-size"><i class="fas fa-weight-hanging"></i> 5.6 MB</span>
+                <span class="badge badge-primary">Jaringan Komputer</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon ppt"><i class="fas fa-file-powerpoint"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Slide – Pengenalan Machine Learning & AI</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-calendar-alt"></i> 19 Sep 2024</span>
+                <span class="materi-size"><i class="fas fa-weight-hanging"></i> 9.2 MB</span>
+                <span class="badge badge-primary">Kecerdasan Buatan</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Unduh</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tugas List -->
+        <div class="materi-list fade-in-up" data-list="tugas" style="display:none">
+          <div class="materi-item">
+            <div class="materi-icon task"><i class="fas fa-code"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Tugas 1 – Membuat Website Portfolio dengan HTML & CSS</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-hourglass-end"></i> Deadline: 20 Sep 2024</span>
+                <span class="badge badge-primary">Pemrograman Web</span>
+                <span class="deadline-badge deadline-done"><i class="fas fa-check"></i> Selesai</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Detail</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon task"><i class="fas fa-database"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Tugas 2 – Perancangan ERD Sistem Perpustakaan</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-hourglass-end"></i> Deadline: 25 Sep 2024</span>
+                <span class="badge badge-primary">Basis Data</span>
+                <span class="deadline-badge deadline-upcoming"><i class="fas fa-clock"></i> Dalam Proses</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Detail</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon task"><i class="fas fa-network-wired"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Laporan Praktikum – Konfigurasi VLAN di Cisco Packet Tracer</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-hourglass-end"></i> Deadline: 30 Sep 2024</span>
+                <span class="badge badge-primary">Jaringan Komputer</span>
+                <span class="deadline-badge deadline-upcoming"><i class="fas fa-clock"></i> Belum Mulai</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Detail</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon task"><i class="fas fa-robot"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">Tugas 3 – Implementasi Algoritma Dijkstra (Python)</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-hourglass-end"></i> Deadline: 05 Okt 2024</span>
+                <span class="badge badge-primary">Kecerdasan Buatan</span>
+                <span class="deadline-badge deadline-upcoming"><i class="fas fa-bolt"></i> Segera</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Detail</a>
+            </div>
+          </div>
+
+          <div class="materi-item">
+            <div class="materi-icon task" style="background:rgba(255,89,89,0.1);color:#ff5959;border-color:rgba(255,89,89,0.3)"><i class="fas fa-exclamation-triangle"></i></div>
+            <div class="materi-info">
+              <div class="materi-title">UTS – Ujian Tengah Semester Basis Data</div>
+              <div class="materi-meta">
+                <span class="materi-date"><i class="fas fa-hourglass-end"></i> Tanggal: 10 Okt 2024</span>
+                <span class="badge badge-primary">Basis Data</span>
+                <span class="deadline-badge deadline-late"><i class="fas fa-exclamation"></i> Perhatian!</span>
+              </div>
+            </div>
+            <div class="materi-actions">
+              <a href="https://drive.google.com" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         GALERI SECTION
+    ========================================================== -->
+    <section id="galeri" class="section">
+      <div class="container section-padding">
+        <div class="section-header fade-in-up">
+          <div class="section-tag"><i class="fas fa-camera"></i> MOMEN KELAS</div>
+          <h2 class="section-title">Galeri <span>Kegiatan</span></h2>
+          <p class="section-subtitle">Kumpulan foto kegiatan dan momen berharga Kelas TI-3B.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Filter -->
+        <div class="gallery-filter fade-in-up">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="akademik">Akademik</button>
+          <button class="filter-btn" data-filter="sosial">Sosial</button>
+          <button class="filter-btn" data-filter="olahraga">Olahraga</button>
+          <button class="filter-btn" data-filter="lapangan">Lapangan</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid fade-in-up">
+          <!-- Item 1 - wide -->
+          <div class="gallery-item wide" data-cat="akademik">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <span style="font-size:0.8rem;color:var(--text-muted)">Foto Kegiatan</span>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Presentasi UAS Pemrograman Web</div>
+              <div class="gallery-date">15 Januari 2024</div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item" data-cat="sosial">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Makan Bareng Kelas</div>
+              <div class="gallery-date">20 Desember 2023</div>
+            </div>
+          </div>
+
+          <!-- Item 3 - tall -->
+          <div class="gallery-item tall" data-cat="olahraga">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-futbol"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Turnamen Futsal Antar Kelas</div>
+              <div class="gallery-date">05 November 2023</div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item" data-cat="akademik">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Praktikum Jaringan Komputer</div>
+              <div class="gallery-date">10 Oktober 2023</div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item" data-cat="sosial">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-birthday-cake"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Perayaan Ulang Tahun Anggota</div>
+              <div class="gallery-date">28 Oktober 2023</div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item" data-cat="lapangan">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Kunjungan Industri ke PT. Telkom</div>
+              <div class="gallery-date">02 November 2023</div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="gallery-item" data-cat="akademik">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Wisuda & Pelepasan Angkatan</div>
+              <div class="gallery-date">15 Agustus 2024</div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="gallery-item" data-cat="olahraga">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Hiking Bersama Kelas TI-3B</div>
+              <div class="gallery-date">12 Februari 2024</div>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="gallery-item" data-cat="lapangan">
+            <div class="gallery-img-placeholder">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="gallery-overlay">
+              <div class="gallery-label">Seminar Nasional Teknologi 2024</div>
+              <div class="gallery-date">20 Maret 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:32px">
+          <a href="https://drive.google.com" target="_blank" class="btn btn-outline">
+            <i class="fas fa-external-link-alt"></i> Lihat Semua Foto di Google Drive
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         KONTAK SECTION
+    ========================================================== -->
+    <section id="kontak" class="section">
+      <div class="container section-padding">
+        <div class="section-header fade-in-up">
+          <div class="section-tag"><i class="fas fa-satellite-dish"></i> HUBUNGI KAMI</div>
+          <h2 class="section-title">Kontak & <span>Pesan</span></h2>
+          <p class="section-subtitle">Ada pertanyaan atau saran? Hubungi pengurus kelas TI-3B.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid fade-in-up">
+          <!-- Info Kontak -->
+          <div>
+            <div class="contact-info-card card" style="padding:32px">
+              <div style="margin-bottom:24px">
+                <h3 style="font-family:var(--font-heading);font-size:0.9rem;color:var(--primary);letter-spacing:2px;margin-bottom:8px">INFO KONTAK</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7">Kami siap membantu. Hubungi pengurus kelas melalui berbagai platform berikut.</p>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <div class="contact-info-label">Email Kelas</div>
+                  <div class="contact-info-value">kelas.ti3b@university.ac.id</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <div class="contact-info-label">WhatsApp Ketua</div>
+                  <div class="contact-info-value">+62 812-3456-7890</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <div class="contact-info-label">Lokasi Kampus</div>
+                  <div class="contact-info-value">Gedung TI, Ruang 302, Lantai 3</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                  <div class="contact-info-label">Jam Aktif</div>
+                  <div class="contact-info-value">Senin – Jumat, 08.00 – 17.00</div>
+                </div>
+              </div>
+
+              <div style="padding-top:20px;border-top:1px solid var(--border)">
+                <div class="contact-info-label" style="margin-bottom:12px">Media Sosial</div>
+                <div class="contact-socials">
+                  <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                  <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                  <a href="#" class="social-btn"><i class="fab fa-discord"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form-card">
+            <h3 style="font-family:var(--font-heading);font-size:0.9rem;color:var(--primary);letter-spacing:2px;margin-bottom:8px">KIRIM PESAN</h3>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:28px">Isi form di bawah dan kami akan merespons sesegera mungkin.</p>
+
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-nama">Nama Lengkap *</label>
+                  <input class="form-input" type="text" id="f-nama" placeholder="Masukkan nama kamu" />
+                  <span class="field-error" id="err-nama"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-email">Email *</label>
+                  <input class="form-input" type="email" id="f-email" placeholder="email@example.com" />
+                  <span class="field-error" id="err-email"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="f-subjek">Kategori Pesan *</label>
+                <select class="form-select" id="f-subjek">
+                  <option value="">-- Pilih Kategori --</option>
+                  <option value="akademik">Akademik / Perkuliahan</option>
+                  <option value="organisasi">Organisasi Kelas</option>
+                  <option value="materi">Materi / Tugas</option>
+                  <option value="kegiatan">Kegiatan / Event</option>
+                  <option value="saran">Saran & Kritik</option>
+                  <option value="lainnya">Lainnya</option>
+                </select>
+                <span class="field-error" id="err-subjek"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="f-pesan">Pesan *</label>
+                <textarea class="form-textarea" id="f-pesan" placeholder="Tulis pesanmu di sini..."></textarea>
+                <span class="field-error" id="err-pesan"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+                <i class="fas fa-paper-plane"></i> Kirim Pesan
+              </button>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle" style="color:var(--accent)"></i>
+              <h4 style="font-family:var(--font-heading);color:var(--white);margin-bottom:8px;letter-spacing:1px">PESAN TERKIRIM!</h4>
+              <p>Terima kasih! Pengurus kelas akan segera menghubungi kamu.</p>
+              <button class="btn btn-outline" style="margin-top:20px" onclick="document.getElementById('form-success').style.display='none';document.getElementById('contact-form').style.display='block';document.getElementById('contact-form').reset()">
+                <i class="fas fa-redo"></i> Kirim Lagi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:0;cursor:default">
+            <div class="nav-logo-icon">TI</div>
+            <span class="nav-logo-text">KELAS <span>3B</span></span>
+          </div>
+          <p>Portal resmi Kelas TI-3B — Teknologi Informasi. Tempat berbagi, berkolaborasi, dan berkembang bersama.</p>
+          <div class="footer-social" style="margin-top:16px">
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">NAVIGASI</div>
+          <ul class="footer-links">
+            <li><a href="#" data-section="home">Home</a></li>
+            <li><a href="#" data-section="profil">Profil Kelas</a></li>
+            <li><a href="#" data-section="jadwal">Jadwal Kuliah</a></li>
+            <li><a href="#" data-section="materi">Materi & Tugas</a></li>
+            <li><a href="#" data-section="galeri">Galeri</a></li>
+            <li><a href="#" data-section="kontak">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">INFO KAMPUS</div>
+          <ul class="footer-links">
+            <li><a href="#">Universitas Teknologi Nusantara</a></li>
+            <li><a href="#">Fakultas Ilmu Komputer</a></li>
+            <li><a href="#">Prodi Teknologi Informasi</a></li>
+            <li><a href="#">Akademik & Kemahasiswaan</a></li>
+            <li><a href="#">Portal Mahasiswa</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2024 <span>Kelas TI-3B</span> · Universitas Teknologi Nusantara · Dibuat dengan <i class="fas fa-heart" style="color:#ff5959;font-size:0.8rem"></i> oleh Tim Kelas
+        </div>
+        <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">
+          v1.0.0 &nbsp;·&nbsp; <span style="color:var(--accent)">●</span> ONLINE
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-top" aria-label="Kembali ke atas">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>
